@@ -1,4 +1,4 @@
-Module to create an GKE cluster (standard or autopilot) where to deploy a Vault cluster
+Module to create an GKE cluster (standard or autopilot) where to deploy a Vault cluster. It extends helm capabilities by adding a loadbalancer for KMIP
 
 ## Requirements
 
