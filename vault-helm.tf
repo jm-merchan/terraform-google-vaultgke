@@ -11,7 +11,6 @@ resource "kubernetes_secret" "tls_secret" {
     name      = "vault-ha-tls"
     namespace = kubernetes_namespace.vault.metadata[0].name
   }
-
   data = {
     "vault.crt" = "${local.vault_cert}\n${local.vault_ca}"
     "vault.key" = local.vault_key
