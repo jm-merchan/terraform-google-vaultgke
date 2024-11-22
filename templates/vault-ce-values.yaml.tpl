@@ -84,7 +84,7 @@ server:
                tls_cert_file             = "/vault/userconfig/vault-ha-tls/vault.crt"
                tls_key_file              = "/vault/userconfig/vault-ha-tls/vault.key"
                tls_client_ca_file        = "/vault/userconfig/vault-ha-tls/vault.ca"
-               tls_disable_client_certs  = true
+               tls_disable_client_certs  = ${disable_tls_auth}
    
             }
             storage "raft" {

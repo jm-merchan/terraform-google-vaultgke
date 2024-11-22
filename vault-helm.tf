@@ -119,6 +119,7 @@ locals {
       namespace             = kubernetes_namespace.vault.metadata[0].name
       service_account       = google_service_account.service_account.email
       expose                = var.expose
+      disable_tls_auth      = var.disable_tls_auth
     })
     # Templating CE Yaml
   vault_user_data_ce = templatefile("${path.module}/templates/vault-ce-values.yaml.tpl",
@@ -133,6 +134,7 @@ locals {
       namespace             = kubernetes_namespace.vault.metadata[0].name
       service_account       = google_service_account.service_account.email
       expose                = var.expose
+      disable_tls_auth      = var.disable_tls_auth
     }
   )
 }

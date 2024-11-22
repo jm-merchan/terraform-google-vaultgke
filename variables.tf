@@ -156,5 +156,10 @@ variable "expose" {
     condition     = contains(["Internal", "External"], var.expose)
     error_message = "The expose variable must be one of 'Internal' or 'External'"
   }
-  
+}
+
+variable "disable_tls_auth" {
+  description = "Whether to disable or not TLS client verification on the Vault listener"
+  type = bool
+  default = false
 }
