@@ -112,7 +112,7 @@ server:
             telemetry {
                disable_hostname                 = true
                prometheus_retention_time        = "12h"
-               unauthenticated_metrics_access   = "true"
+               # unauthenticated_metrics_access   = "true"
             }
             disable_mlock = true
             service_registration "kubernetes" {}
